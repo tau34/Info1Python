@@ -4,11 +4,25 @@ answers = [0, 2, 1]
 message = ["残念。0点でした。頑張りましょう。", "あなたの点数は1点でした。", "あなたの点数は2点でした。", "素晴らしい!3点満点です!"]
 selected = [0, 0, 0]
 
-for i in range(len(question)):
-    print(question[i])
-    for j in range(len(options[i])):
-        print(str(j + 1) + ": " + options[i][j])
-    ans = int(input("答えを選んでください: "))
-    selected[i] = ans - 1
+print(question[0])
+print("1: " + options[0][0])
+print("2: " + options[0][1])
+print("3: " + options[0][2])
+ans = int(input("答えを選んでください: "))
+selected[0] = ans - 1
+
+print(question[1])
+print("1: " + options[1][0])
+print("2: " + options[1][1])
+print("3: " + options[1][2])
+ans = int(input("答えを選んでください: "))
+selected[1] = ans - 1
+
+print(question[2])
+print("1: " + options[2][0])
+print("2: " + options[2][1])
+print("3: " + options[2][2])
+ans = int(input("答えを選んでください: "))
+selected[2] = ans - 1
 
 print(message[sum(selected[i] == answers[i] for i in range(len(question)))])
