@@ -1,6 +1,6 @@
 f = open("hyaku.csv", encoding="utf-8")
 i = input("1~100の数字を入力：")
-a = f.readlines()[int(i - 1)].split(",")
+a = f.readlines()[int(i) - 1].split(",")
 print(a[0])
 print(" " + a[1])
 print(" " + a[2])
@@ -10,3 +10,4 @@ print(a[4])
 print(" " + a[5])
 
 f.close()
+
